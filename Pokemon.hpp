@@ -1,3 +1,6 @@
+#ifndef POKEMON_HPP
+#define POKEMON_HPP
+
 #include <string>
 
 using std::string;
@@ -31,3 +34,5 @@ class Pokemon
 		void heal(int);
 		void level_up();
 };
+
+#endif
