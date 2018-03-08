@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include "Game.hpp"
-
 using std::cout;
 using std::endl;
 using std::string;
@@ -14,6 +13,13 @@ Game::Game()
 
 	//initialize current day to 0
 	this-> currentTime = 0;
+
+	//create game spaces
+	ash = new Ash;	
+	home = new House;
+	pallet_town = new Village("Pallet Town");
+	lab = new OakLab;
+	route1 = new Wilderness;
 }
 
 Game::~Game()
