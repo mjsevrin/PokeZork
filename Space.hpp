@@ -15,14 +15,23 @@ class Space
 	
 	public:
 		//constructors & destructors
-		Space(string, Space*, Space*, Space*, Space*);
+		Space(string);
 		~Space();
-
+		
+		//getters
 		string getName();
 		Space* getLeft();
 		Space* getRight();
 		Space* getUp();
 		Space* getDown();
+
+		void setLeft(Space* ptr);
+		void setRight(Space* ptr);
+		void setUp(Space* ptr);
+		void setDown(Space* ptr);
+		
+		//misc.
+		virtual void interact() = 0;
 };
 
 #endif
