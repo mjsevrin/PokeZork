@@ -16,9 +16,10 @@ OBJS = PokeZork.o validate.o  menu.o
 HEADERS = validate.hpp  menu.hpp
 
 # Project specific - Change as needed
-OBJS += Game.o Space.o Ash.o Pokemon.o	
-HEADERS += Game.hpp Space.hpp Ash.hpp Pokemon.hpp 
-
+OBJS += Game.o Space.o Ash.o Pokemon.o House.o Village.o OakLab.o 
+OBJS += Wilderness.o
+HEADERS += Game.hpp Space.hpp Ash.hpp Pokemon.hpp House.hpp Village.o OakLab.hpp 
+HEADERS += Wilderness.hpp 
 # Output name
 OUTPUT = Play_Game
 
