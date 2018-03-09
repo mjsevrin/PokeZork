@@ -8,6 +8,9 @@
 #include "Village.hpp"
 #include "OakLab.hpp"
 #include "Wilderness.hpp"
+#include "PokeCenter.hpp"
+#include "PokeShop.hpp"
+#include "Gym.hpp"
 
 class Game 
 {
@@ -20,6 +23,10 @@ class Game
 		Village* pallet_town;
 		OakLab* lab;
 		Wilderness* route1;
+		Village* pewter_city;
+		PokeCenter* center1;
+		PokeShop* shop1;
+		Gym* gym;
 		
 	public:
 		//constructor & destructor
@@ -27,6 +34,7 @@ class Game
 		~Game();
 
 		void run();
+		void doAction();
 };
 
 #endif
