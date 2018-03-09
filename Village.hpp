@@ -13,7 +13,7 @@ class Village : public Space
 		//constructors & destructors
 		Village(string name);
 		~Village();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif
