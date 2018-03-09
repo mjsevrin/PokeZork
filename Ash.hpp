@@ -11,6 +11,7 @@ class Ash
 {
 	private:
 		Space* location;
+		vector<Space*> neighbors;
 		vector<Pokemon*> team;
 		int potions;
 		int money; 
@@ -20,7 +21,11 @@ class Ash
 		//constructor & destructor
 		Ash();
 		~Ash();
-
+		
+		//getters
+		Space* getLocation();
+		
+		void move();
 		void move(Space*);
 		
 };
