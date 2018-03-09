@@ -13,7 +13,7 @@ class Gym : public Space
 		//constructors & destructors
 		Gym(string name = "Pewter City Gym");
 		~Gym();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif

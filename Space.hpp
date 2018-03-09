@@ -4,6 +4,7 @@
 #include <string>
 using std::string;
 
+class Ash;
 class Space 
 {
 	protected:
@@ -16,7 +17,7 @@ class Space
 	public:
 		//constructors & destructors
 		Space(string);
-		~Space();
+		virtual ~Space();
 		
 		//getters
 		string getName();
@@ -31,7 +32,7 @@ class Space
 		void setDown(Space* ptr);
 		
 		//misc.
-		virtual void interact() = 0;
+		virtual void interact(Ash*) = 0;
 };
 
 #endif

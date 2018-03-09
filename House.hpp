@@ -10,10 +10,10 @@ class House : public Space
 {
 	public:
 		//constructors & destructors
-		House(string name =  "Home");
+		House(string name =  "Mom's House");
 		~House();
 		
-		void interact();	
+		void interact(Ash*);	
 						
 };
 

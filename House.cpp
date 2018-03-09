@@ -12,6 +12,6 @@ House::~House()
 {
 }
 
-void House::interact()
+void House::interact(Ash*)
 {
 }

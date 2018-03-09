@@ -13,7 +13,7 @@ class OakLab : public Space
 		//constructors & destructors
 		OakLab(string name = "Professor Oak's Lab");
 		~OakLab();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif

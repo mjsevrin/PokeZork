@@ -11,6 +11,6 @@ Gym::Gym(string name): Space (name)
 Gym::~Gym()
 {}
 
-void Gym::interact()
+void Gym::interact(Ash*)
 {
 }

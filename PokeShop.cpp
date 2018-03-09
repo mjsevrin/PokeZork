@@ -11,6 +11,6 @@ PokeShop::PokeShop(string name): Space (name)
 PokeShop::~PokeShop()
 {}
 
-void PokeShop::interact()
+void PokeShop::interact(Ash*)
 {
 }

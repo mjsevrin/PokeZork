@@ -11,7 +11,7 @@ Village::Village(string name): Space (name)
 Village::~Village()
 {}
 
-void Village::interact()
+void Village::interact(Ash*)
 {
 }
 

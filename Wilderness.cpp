@@ -11,6 +11,6 @@ Wilderness::Wilderness(string name): Space (name)
 Wilderness::~Wilderness()
 {}
 
-void Wilderness::interact()
+void Wilderness::interact(Ash*)
 {
 }

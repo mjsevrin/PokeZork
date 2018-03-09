@@ -13,7 +13,7 @@ class PokeCenter : public Space
 		//constructors & destructors
 		PokeCenter(string name = "PokeCenter");
 		~PokeCenter();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif

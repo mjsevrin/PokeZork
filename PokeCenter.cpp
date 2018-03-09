@@ -11,6 +11,6 @@ PokeCenter::PokeCenter(string name): Space (name)
 PokeCenter::~PokeCenter()
 {}
 
-void PokeCenter::interact()
+void PokeCenter::interact(Ash*)
 {
 }

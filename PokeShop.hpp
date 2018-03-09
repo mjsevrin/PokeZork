@@ -13,7 +13,7 @@ class PokeShop : public Space
 		//constructors & destructors
 		PokeShop(string name = "PokeShop");
 		~PokeShop();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif

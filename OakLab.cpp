@@ -12,6 +12,6 @@ OakLab::~OakLab()
 {}
 
 
-void OakLab::interact()
+void OakLab::interact(Ash*)
 {
 }

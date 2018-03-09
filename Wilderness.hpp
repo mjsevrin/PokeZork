@@ -13,7 +13,7 @@ class Wilderness : public Space
 		//constructors & destructors
 		Wilderness(string name = "Route 1");
 		~Wilderness();
-		void interact();	
+		void interact(Ash*);	
 };
 
 #endif
