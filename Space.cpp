@@ -1,6 +1,6 @@
 
 #include "Space.hpp"
-
+#include "Ash.hpp"
 
 Space::Space(string name)
 {
