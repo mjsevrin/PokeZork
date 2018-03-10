@@ -3,10 +3,10 @@
 #define ASH_HPP
 
 #include <vector>
-#include "Space.hpp"
 #include "Pokemon.hpp"
 using std::vector;
 
+class Space;
 class Ash
 {
 	private:
@@ -24,10 +24,18 @@ class Ash
 		
 		//getters
 		Space* getLocation();
-		
+		int getFunds();
+		int getPotions();
+
 		void move();
 		void move(Space*);
-		
+		bool hasPokemon();
+		void addPokemon(Pokemon*);
+		void healTeam();
+		void spend(int);
+		void addPotions(int);
+		void usePotion(Pokemon*); 
+		void Fight(Pokemon*);
 };
 
 #endif
