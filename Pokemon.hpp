@@ -33,6 +33,9 @@ class Pokemon
 		void defend(int);
 		void heal(int);
 		void level_up();
+		void printHP();
+		Pokemon* combat(int choice, Pokemon*);
+		void wonFight(Pokemon*);
 };
 
 #endif

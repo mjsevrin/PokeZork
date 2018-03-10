@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Pokemon.hpp"
+#include "Ash.hpp"
 using std::cout;
 using std::endl;
 
@@ -12,7 +13,7 @@ Pokemon::Pokemon(string name, int HP, int lvl, int power)
 	this->lvl = lvl;
 	this->power = power;
 	this->currentXP = 0;
-	this->level_upXP = 25;
+	this->level_upXP = 50;
 }
 
 //getters
@@ -80,10 +81,58 @@ void Pokemon::defend(int attack)
 *****************************************************************************/
 void Pokemon::level_up()
 {
+	//stats boost and refresh HP
 	lvl++;
-	currentXP = 0;
+	maxHP += 3;
+	HP = maxHP;
+
+	//keep left over XP
+	currentXP -= level_upXP;
+	
+	//make next lvl harder to reach;
 	level_upXP += level_upXP/2;
 }
 
+void Pokemon::printHP()
+{
+	cout << "(" << HP << "/" << maxHP << ")" << endl << endl;
+}
 
+Pokemon* Pokemon::combat(int choice, Pokemon* ennemy)
+{
+	if (choice == 1)
+	{	
+		//ennemy defending attack
+		ennemy->defend(attack());
+	}
+	
+	//check ennemy didn't faint 
+	if(ennemy->getHP() <= 0)
+	{
+		//ennemy has died
+		wonFight(ennemy);
+		return this;
+	}
+	//if ennemy alive, attack Ash's pokemon 
+	else 
+	{
+		//defending ennemy attack
+		defend(ennemy->attack());
+	
+		//check for fainting 
+		if(HP <= 0)
+		{
+			return ennemy;
+		}
+	}
+	return NULL;
+}
 
+void Pokemon::wonFight(Pokemon* ennemy)
+{
+	currentXP += 50;
+	if(currentXP >= level_upXP)
+	{
+		level_up();
+	}
+}	
