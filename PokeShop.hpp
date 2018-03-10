@@ -14,6 +14,7 @@ class PokeShop : public Space
 		PokeShop(string name = "PokeShop");
 		~PokeShop();
 		void interact(Ash*);	
+		void buyPotions(Ash*);
 };
 
 #endif
