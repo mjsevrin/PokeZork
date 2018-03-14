@@ -28,7 +28,7 @@ void printMap()
 	cout <<"	             +-----+-+------+" << endl; 
 	cout <<"	     		   | |" << endl; 
 	cout <<"		     +-----+-+------+" << endl; 
-	cout <<"		     |  Wilderness  |" << endl; 
+	cout <<"		     |    Route 1   |" << endl; 
 	cout <<" 		     +-----+-+------+" << endl; 
 	cout <<" 	                   | |" << endl; 
 	cout <<"     +-------------+ +-----+-+------+ +------------+" << endl; 
