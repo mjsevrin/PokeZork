@@ -18,25 +18,26 @@ void printMap()
 {
 	cout <<"		     +--------------+" << endl;
 	cout <<"        	     |     Gym      |" << endl; 
-	cout <<"       		     +-----+-+------+" << endl; 
+	cout <<"       		     +-----+ +------+" << endl; 
 	cout <<"              		   | |" << endl; 
-	cout <<"	+----------+ +-----+-+------+ +------------+" << endl; 
+	cout <<"	+----------+ +-----+ +------+ +------------+" << endl; 
 	cout <<"	|          | |              | |            |" << endl; 
 	cout <<"	| PokeShop +-+  Pewter City +-+ PokeCenter |" << endl; 
 	cout <<"	|          +-+    Square    +-+            |" << endl; 
 	cout <<"	+----------+ |              | +------------+" << endl; 
-	cout <<"	             +-----+-+------+" << endl; 
+	cout <<"	             +-----+ +------+" << endl; 
 	cout <<"	     		   | |" << endl; 
-	cout <<"		     +-----+-+------+" << endl; 
+	cout <<"		     +-----+ +------+" << endl; 
 	cout <<"		     |    Route 1   |" << endl; 
-	cout <<" 		     +-----+-+------+" << endl; 
+	cout <<" 		     +-----+ +------+" << endl; 
 	cout <<" 	                   | |" << endl; 
-	cout <<"     +-------------+ +-----+-+------+ +------------+" << endl; 
-	cout <<"     |             | |              | |            |" << endl; 
-	cout <<"     | Mom's House +-+  Pallet Town +-+ PokeCenter |" << endl; 
-	cout <<"     |             +-+    Square    +-+            |" << endl; 
-	cout <<"     +-------------+ |              | +------------+" << endl; 
-	cout <<"                     +--------------+" << endl << endl;
+	cout <<"     +-------------+ +-----+ +------+ +-------------+" << endl; 
+	cout <<"     |             | |              | |             |" << endl; 
+	cout <<"     | Mom's House +-+  Pallet Town +-+  Prof. Oak  |" << endl; 
+	cout <<"     |             +-+    Square    +-+     Lab     |" << endl; 
+	cout <<"     +-------------+ |              | |             |" << endl; 
+	cout <<"                     +--------------+ +-------------+" 
+		<< endl << endl;
 
 
 }
