@@ -1,3 +1,11 @@
+
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Definition of the Pokemon class. Pokemon objects represent 
+the pokemons that will be fighting each other in the game.
+***************************************************************************/
 #ifndef POKEMON_HPP
 #define POKEMON_HPP
 

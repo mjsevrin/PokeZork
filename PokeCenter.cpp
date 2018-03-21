@@ -1,4 +1,11 @@
 
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Implementation of the PokeCenter class. A derived Space class. 
+The PokeCenter class is where the player can heal his party 
+***************************************************************************/
 #include <iostream>
 #include "validate.hpp"
 #include "PokeCenter.hpp"
@@ -7,7 +14,7 @@
 using std::cout;
 using std::endl;
 
-PokeCenter::PokeCenter(string name): Space (name)
+PokeCenter::PokeCenter(string name, string action): Space (name, action)
 {
 	
 }
@@ -15,6 +22,11 @@ PokeCenter::PokeCenter(string name): Space (name)
 PokeCenter::~PokeCenter()
 {}
 
+/*****************************************************************************
+* Description: Ash's iteraction with this Space
+* @parameter - ptr to Ash 
+* @return - none 
+*****************************************************************************/
 void PokeCenter::interact(Ash* ash)
 {
 	cout << "NURSE: Welcome to our Pokemon Center! Would you like to heal"
@@ -23,7 +35,7 @@ void PokeCenter::interact(Ash* ash)
 	if (choice == 1)
 	{
 		ash->healTeam();
-		cout << "NURSE: Your part has been healed!" << endl << endl;
+		cout << "NURSE: Your party has been healed!" << endl << endl;
 	}
 	cout << "NURSE: Thank you for coming, have a safe journey!";
        	cout << endl << endl;

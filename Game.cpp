@@ -1,8 +1,17 @@
 
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Implementation the Game class. The class handles the smooth
+running of the game.
+***************************************************************************/
+
 #include <iostream>
 #include <string>
-#include "Game.hpp"
 #include "validate.hpp"
+#include "Graphics.hpp"
+#include "Game.hpp"
 
 using std::cout;
 using std::endl;
@@ -21,7 +30,7 @@ Game::Game()
 	pallet_town = new Village("Pallet Town Square");
 	lab = new OakLab;
 	route1 = new Wilderness;
-	pewter_city = new Village("Pewter City Square");
+	pewter_city = new Town("Pewter City Square");
 	center1 = new PokeCenter;
 	shop1 = new PokeShop;
 	gym = new Gym;
@@ -43,8 +52,7 @@ Game::Game()
 	gym->setDown(pewter_city);
 	
 	//create in starting location
-	ash = new Ash;
-	ash->move(home);	
+	ash = new Ash(home);
 }
 
 Game::~Game()
@@ -73,14 +81,19 @@ void Game::run()
 	while (gameStatus == true)
 	{
 
-		if (currentTime > 10) //check if out of moves
+		if (currentTime >= 24) //check if out of moves
 		{
 			//update game status to end
 			gameStatus = false;
 			//tell user he's broke
-			cout << "You are out of time!" << endl;
+			cout << "You are out of time!" << endl << endl;
+			cout << "GAME OVER" << endl << endl; 
 		}
-		
+		else if (ash->getStatus())
+		{
+			gameStatus = false;
+			cout << "Congratulations, you have won the game!"<< endl;	
+		}
 		else //if not, continue playing
 		{
 			//Choose action for Ash
@@ -89,7 +102,6 @@ void Game::run()
 	}
 		
 	//end of game prompt
-	cout << "Game over" << endl << endl; 
 }	
 
 /*****************************************************************************
@@ -99,18 +111,25 @@ void Game::run()
 *****************************************************************************/
 void Game::doAction()
 {
-	cout << "What should Ash do?" << endl;
+	cout << "CURRENT LOCATION: " << ash->getLocation()->getName() << endl;
+	cout << "TIME LEFT: " << 24-currentTime << " hours" << endl;
+	cout << "MONEY: $" << ash->getFunds() << endl; 
 	cout << "[1]-Travel somewhere else" << endl;
-	cout << "[2]-Explore " << ash->getLocation()->getName() << endl;
-	int choice = valInt(1,2);
+	cout << "[2]-" << ash->getLocation()->getAction() << endl;
+	cout << "[3]-Check map" << endl;
+	int choice = valInt(1,3);
 	if (choice == 1)
 	{
 		ash->move();
 		currentTime++;
 	}
-	else
+	else if (choice == 2)
 	{
 		ash->getLocation()->interact(ash);
+	}
+	else if (choice ==3)
+	{
+		printMap();
 	}
 }
 				

@@ -1,3 +1,12 @@
+
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Implementation of the Pokemon class. Pokemon objects represent 
+the pokemons that will be fighting each other in the game.
+***************************************************************************/
+
 #include <iostream>
 #include "Pokemon.hpp"
 #include "Ash.hpp"
@@ -93,11 +102,23 @@ void Pokemon::level_up()
 	level_upXP += level_upXP/2;
 }
 
+/*****************************************************************************
+* Description: display the current HP of a pokemon as a ration of its max HP
+* @parameter - none 
+* @return - none
+*****************************************************************************/
 void Pokemon::printHP()
 {
 	cout << "(" << HP << "/" << maxHP << ")" << endl << endl;
 }
 
+/*****************************************************************************
+* Description: simulate a combat round in a pokemon battle.  The user may have 
+* chosen to use an item, if he didnt. Poekmon should attack the ennemy before
+* he attacks back (if still alive) 
+* @parameter - combat choice, pokemon to attack 
+* @return - return winner of combat if one pokemon faints, else returns NULL 
+*****************************************************************************/
 Pokemon* Pokemon::combat(int choice, Pokemon* ennemy)
 {
 	if (choice == 1)
@@ -128,11 +149,18 @@ Pokemon* Pokemon::combat(int choice, Pokemon* ennemy)
 	return NULL;
 }
 
+/*****************************************************************************
+* Description: end of combat xp gains for pokemon that defeats another
+* @parameter - ptr to ennemy pokemon defeated (currently not useful but could be 
+* in later iterations of combat system) 
+* @return - none 
+*****************************************************************************/
 void Pokemon::wonFight(Pokemon* ennemy)
 {
 	currentXP += 50;
 	if(currentXP >= level_upXP)
 	{
 		level_up();
+		cout << name << " grew to level " << lvl << "!" << endl << endl;
 	}
 }	

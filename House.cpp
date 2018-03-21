@@ -1,4 +1,12 @@
 
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Implementation of the House class. A derived Space class. 
+The House class is where the player can talk to Mom and eventually win the
+game.
+***************************************************************************/
 #include <iostream>
 #include "House.hpp"
 #include "Ash.hpp"

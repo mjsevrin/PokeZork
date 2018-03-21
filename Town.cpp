@@ -1,4 +1,11 @@
 
+/**************************************************************************
+*** Program Name: PokeZork 
+*** Author: Martin Sevrin
+*** Date: 03/20/2018 
+*** Description: Implementation of the Town class. A derived Space class. 
+The Town class is where the player can interact with townpeople 
+***************************************************************************/
 
 #include <iostream>
 #include "validate.hpp"

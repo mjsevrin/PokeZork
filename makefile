@@ -17,9 +17,11 @@ HEADERS = validate.hpp  menu.hpp
 
 # Project specific - Change as needed
 OBJS += Game.o Space.o getRand.o Ash.o Pokemon.o House.o Village.o
-OBJS += Wilderness.o PokeCenter.o PokeShop.o Gym.o Graphics.o OakLab.o 
-HEADERS += Game.hpp Space.hpp Ash.hpp getRand.hpp Pokemon.hpp House.hpp Village.o 
-HEADERS += Wilderness.hpp PokeCenter.hpp PokeShop.hpp Gym.hpp Graphics.hpp OakLab.hpp
+OBJS += Wilderness.o PokeCenter.o PokeShop.o Gym.o Graphics.o OakLab.o Item.o
+OBJS +=	Town.o 
+HEADERS += Game.hpp Space.hpp Ash.hpp getRand.hpp Pokemon.hpp House.hpp Village.hpp 
+HEADERS += Wilderness.hpp PokeCenter.hpp PokeShop.hpp Gym.hpp Graphics.hpp OakLab.hpp Item.hpp
+HEADERS += Town.hpp 
 # Output name
 OUTPUT = Play_Game
 
